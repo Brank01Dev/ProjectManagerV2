@@ -14,6 +14,10 @@
                         Log out
                     </button>
                 </form>
+                
+                <a class="btn btn-success px-4 py-2 bg-green-600 text-white rounded-md" href="{{ route('profile.edit') }}">
+                    Edit profile
+                </a>
 
                 <a class="btn btn-success px-4 py-2 bg-green-600 text-white rounded-md" href="{{ route('Project.create') }}">
                     Add a project!
@@ -70,6 +74,13 @@
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger px-2 py-1 bg-red-600 text-white rounded-md">Edit Status</button>
+                        </form>
+                        <form action="{{ route('Project.forceDelete', $project->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to permanently delete this project?')" class="inline-block ml-2">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger px-2 py-1 bg-red-700 text-white rounded-md">
+                                Delete Permanently
+                            </button>
                         </form>
                     </td>
                 </tr>

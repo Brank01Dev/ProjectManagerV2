@@ -24,6 +24,8 @@ Route::middleware('auth')->group(function () {
 Route::get('/', function () {
     return redirect("/Project");
 }); 
+Route::delete('/Project/{id}/force-delete', [ProjectController::class, 'forceDelete'])
+    ->name('Project.forceDelete');
  
 Route::resource("/Project", "App\Http\Controllers\ProjectController");
 

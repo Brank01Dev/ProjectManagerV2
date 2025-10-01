@@ -115,4 +115,16 @@ public function index()
         return view('dashboard', compact('Project'))
         ->with('i', (request()->input('page', 1) - 1) * 5);
     }
+
+
+
+    public function forceDelete($id)
+{
+    $project = Project::findOrFail($id);
+    $project->delete(); 
+
+    return redirect()->route('Project.index')
+                     ->with('success', 'Project deleted permanently.');
+}
+
 }
