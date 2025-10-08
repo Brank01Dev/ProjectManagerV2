@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>My Laravel App</title>
-    @vite(['resources/css/loginpage.scss'])
+    @vite(['resources/scss/loginpage.scss'])
 </head>
 <body>
 
