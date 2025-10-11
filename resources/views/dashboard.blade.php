@@ -1,4 +1,5 @@
 @extends('layout') 
+@vite(['resources/scss/loginpage.scss', 'resources/js/app.js'])
 
 @section('content')
     <div class="row mb-4">
@@ -25,7 +26,6 @@
             </div>
         </div>
     </div> 
-
     @if($message = Session::get('success'))
         <div class="alert alert-success mb-4">
             <p>{{ $message }}</p>
@@ -87,4 +87,31 @@
                 @endforeach
         </tbody>
     </table> 
+
+    <canvas id="projectChart"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const projectData = @json($projectData);
+    
+        const ctx = document.getElementById('projectChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: Object.keys(projectData),
+                datasets: [{
+                    label: 'Projects by Status',
+                    data: Object.values(projectData),
+                    backgroundColor: ['#36A2EB', '#4BC0C0', '#FFCE56', '#FF6384', '#9966FF'],
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom' },
+                    title: { display: true, text: 'Projects by Status' }
+                }
+            }
+        });
+    </script>
 @endsection
