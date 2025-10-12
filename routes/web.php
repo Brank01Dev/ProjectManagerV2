@@ -1,33 +1,36 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
-use App\Http\Controllers\ProjectController;
+
+Route::get('/', function () {
+    return redirect()->route('login');
+});
 
 
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
     ->name('logout');
-Route::get('/', function () {
-    return view('welcome');
-});
+
+//protected
+Route::middleware(['auth', 'verified'])->group(function () {
+
+    //dashboard 
+    Route::get('/dashboard', [ProjectController::class, 'index'])
+        ->name('dashboard');
 
 
-Route::get('/dashboard', [ProjectController::class, 'index'])
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+    Route::resource('/Project', ProjectController::class);
+
     
-Route::middleware('auth')->group(function () {
+    Route::delete('/Project/{id}/force-delete', [ProjectController::class, 'forceDelete'])
+        ->name('Project.forceDelete');
+
+    
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::get('/', function () {
-    return redirect("/Project");
-}); 
-Route::delete('/Project/{id}/force-delete', [ProjectController::class, 'forceDelete'])
-    ->name('Project.forceDelete');
- 
-Route::resource("/Project", "App\Http\Controllers\ProjectController");
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
