@@ -2,8 +2,8 @@
 @vite(['resources/scss/dashboard.scss', 'resources/js/app.js'])
 
 @section('content')
-    <div class="dashboard-container">
-        <div class="dashboard-header">
+    <div class="row mb-4">
+        <div class="">
             <div class="">
                 <h2>Project Manager</h2>
             </div>
@@ -20,7 +20,7 @@
                     Edit profile
                 </a>
 
-                <a class="btn btn-success px-4 py-2 bg-green-600 text-white rounded-md"" href="{{ route('Project.create') }}">
+                <a class="btn btn-success px-4 py-2 bg-green-600 text-white rounded-md" href="{{ route('Project.create') }}">
                     Add a project!
                 </a>
             </div>
@@ -32,7 +32,7 @@
         </div>
     @endif 
 
-    <table class="dashboard-container">
+    <table class="board">
         <thead>
             <tr>
                 <th>No.</th>
@@ -88,9 +88,6 @@
         </tbody>
     </table> 
 
-
-    <div class="chart-container">
-        
     <canvas id="projectChart"></canvas>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -117,5 +114,4 @@
             }
         });
     </script>
-    </div>
 @endsection
