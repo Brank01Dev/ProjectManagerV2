@@ -31,8 +31,8 @@
             <p>{{ $message }}</p>
         </div>
     @endif 
-
-    <table class="dashboard-container">
+<div class="mainpage">
+    <table class="board">
         <thead>
             <tr>
                 <th>No.</th>
@@ -68,7 +68,7 @@
                     <td>{{ $project->date_of_start }}</td>
                     <td>{{ $project->date_of_end }}</td>
                     <td>
-                        <form action="{{ route('Project.destroy', $project->id) }}" method="POST" class="flex gap-2">
+                        <form action="{{ route('Project.destroy', $project->id) }}" method="POST" >
                             <a class="btn btn-info px-2 py-1 bg-blue-600 text-white rounded-md" href="{{ route('Project.show', $project->id) }}">Show</a>
                             <a class="btn btn-primary px-2 py-1 bg-indigo-600 text-white rounded-md" href="{{ route('Project.edit', $project->id) }}">Edit</a>
                             @csrf
@@ -118,4 +118,5 @@
         });
     </script>
     </div>
+</div>
 @endsection
