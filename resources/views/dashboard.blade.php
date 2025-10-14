@@ -4,25 +4,18 @@
 @section('content')
     <div class="dashboard-container">
         <div class="dashboard-header">
-            <div class="">
+            <div>
                 <h2>Project Manager</h2>
+                <a style="margin-top: 2em" href="{{ route('Project.create') }}" class="btn btn-primary add-project-btn">+ Add Project</a>
             </div>
-            
-            <div class="flex gap-2">
-                <form method="POST" action="{{ route('logout') }}">
+        
+            <div style="margin-right: 2em; display: flex; flex-direction: column; align-items: center;">
+                <a style="margin-bottom: 3em; margin-top: 3em;" href="{{ route('profile.edit') }}" class="btn btn-secondary">Edit Profile</a>
+        
+                <form method="POST" action="{{ route('logout') }}" class="inline-form">
                     @csrf
-                    <button type="submit" class="px-4 py-2 bg-red-600 text-white rounded-md">
-                        Log out
-                    </button>
+                    <button type="submit" class="btn btn-danger">Logout</button>
                 </form>
-                
-                <a class="btn btn-success px-4 py-2 bg-green-600 text-white rounded-md" href="{{ route('profile.edit') }}">
-                    Edit profile
-                </a>
-
-                <a class="btn btn-success px-4 py-2 bg-green-600 text-white rounded-md"" href="{{ route('Project.create') }}">
-                    Add a project!
-                </a>
             </div>
         </div>
     </div> 

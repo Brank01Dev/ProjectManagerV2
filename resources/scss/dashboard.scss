@@ -19,12 +19,12 @@ body {
 
 .dashboard-container {
   width: 100%;
-  max-width:170em;
+  max-width: 200em;
   margin: 40px auto;
   background-color: $color-bg;
   border-radius: 20px;
   box-shadow: -8px -8px 16px $color-white, 8px 8px 16px $color-shadow;
-  padding: 40px;
+  padding: 20px;
 }
 
 .mainpage {
@@ -91,7 +91,8 @@ body {
 
 // ========== TABLE ==========
 .board {
-    max-width: 80em;
+   width: 100%;
+    max-width: 1200px;
     margin-top: 40px;
     margin-right: 2em ;
     background-color: $color-bg;
@@ -159,13 +160,14 @@ body {
 // ========== CHART ==========
 
 .chart-container {
-    width: 50em;
+    width: 20em;
     margin-top: 40px;
     background-color: $color-bg;
     border-radius: 20px;
     box-shadow: -8px -8px 16px $color-white, 8px 8px 16px $color-shadow;
-    padding: 40px;
+    padding: 10px;
     display: flex;
-    max-height: 25em;
+    max-height: 20em;
 
   }
+
