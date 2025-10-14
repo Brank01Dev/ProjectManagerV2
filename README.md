@@ -24,3 +24,11 @@ It’s a practice project.
 - User needs to be able to manage his account. 👨🏽‍💼
 - Security needs to be upgraded. 🔐
 - User needs to be able to get a email notification that has his project description. 📩
+
+---
+
+
+# Screenshot of dashboard page in first version.
+
+![Screenshot 2025-10-14 at 17 11 01](https://github.com/user-attachments/assets/2f4b2dc7-e154-43ad-954e-e2b1363768e0)
+
