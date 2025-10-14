@@ -32,7 +32,8 @@ body {
     flex-direction: row;
 }
 
-// ========== HEADER ==========
+//------- Header
+
 .dashboard-header {
   display: flex;
   justify-content: space-between;
@@ -81,7 +82,8 @@ body {
   }
 }
 
-// ========== MAIN CONTENT ==========
+//------- Main
+
 .dashboard-main {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -89,7 +91,8 @@ body {
   align-items: start;
 }
 
-// ========== TABLE ==========
+//------- Tabel
+
 .board {
    width: 100%;
     max-width: 1200px;
@@ -128,26 +131,8 @@ body {
   }
 }
 
-// ========== CHART ==========
-.chart-container {
-  background-color: $color-bg;
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: -5px -5px 15px $color-white, 5px 5px 15px $color-shadow;
-  text-align: center;
+//------- Alert notification
 
-  h3 {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: $color-text;
-  }
-
-  canvas {
-    max-width: 100%;
-  }
-}
-
-// ========== ALERT ==========
 .alert {
   padding: 15px 20px;
   margin-bottom: 20px;
@@ -157,7 +142,7 @@ body {
   box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
 }
 
-// ========== CHART ==========
+//------- Pie Chart
 
 .chart-container {
     width: 20em;

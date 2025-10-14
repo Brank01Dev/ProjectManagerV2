@@ -13,10 +13,10 @@ Route::get('/', function () {
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
     ->name('logout');
 
-//protected
+
 Route::middleware(['auth', 'verified'])->group(function () {
 
-    //dashboard 
+    
     Route::get('/dashboard', [ProjectController::class, 'index'])
         ->name('dashboard');
 
