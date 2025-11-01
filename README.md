@@ -6,22 +6,13 @@ It allows users to create, edit, and delete projects, and manage basic task list
 
 ---
 
-## 🔍 What it new???
+## 🔍 What it new?
 
 **ProjectManagerV2** updates:
 
 - Now you have to login or register in ProjectManagerV2 to save your projects. 🛟
 - ProjectManagerV2 lets you securely add your account and manage only your projects. 📝
 - ProjectManagerV2 uses Laravel Breeze for user authentication. 🪪
-
----
-
-# 👷🏽ProjectManagerV2 is still in working progress.
-
-- CSS needs to be polished. 🧼
-- User needs to be able to manage his account. 👨🏽‍💼
-- Security needs to be upgraded. 🔐
-- User needs to be able to get a email notification that has his project description. 📩
 
 ---
 
@@ -59,15 +50,32 @@ http://localhost:8000
 
 ---
 
+# 🧰 Tech Stack
 
-# Screenshot of dashboard page in first version.
-
-![Screenshot 2025-10-14 at 17 11 01](https://github.com/user-attachments/assets/2f4b2dc7-e154-43ad-954e-e2b1363768e0)
+- **Backend:** Laravel 10 (PHP)
+- **Frontend:** Blade + TailwindCSS
+- **Authentication:** Laravel Breeze
+- **Database:** MySQL
+- **Runtime:** PHP 8+, Node.js, npm
 
 ---
 
+
+#  🖼️ Preview
+
+![Dashboard Screenshot](https://github.com/user-attachments/assets/2f4b2dc7-e154-43ad-954e-e2b1363768e0)
+(Example of the project dashboard UI)
+ 
+---
+
 # 👤 Author
+- Branko – Junior Full-Stack Developer passionate about building practical web applications.
+-📍Based in Switzerland 🇨🇭  
+- [GitHub￼](https://github.com/Brank01Dev)
+  
+---
 
-- Branko – [GitHub￼](https://github.com/Brank01Dev)
+## 📌 Project Status
+🚧 **Work in progress.**  
+This version focuses on authentication and project CRUD — additional features and UI improvements are planned for upcoming releases.
 
-Junior Full-Stack Developer passionate about building practical web applications.
