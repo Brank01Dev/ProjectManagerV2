@@ -1,8 +1,8 @@
 # ProjectManagerV2
 
-My second Laravel project — built for learning purposes.  
-This is upgraded version of first Project Manager. Project is still in very rough shape and
-needs a lot of work. This is just a base model of a Project
+
+ProjectManagerV2 is a simple project management web app built with **Laravel 10** and **TailwindCSS**.  
+It allows users to create, edit, and delete projects, and manage basic task lists within each project.
 
 ---
 
@@ -14,11 +14,9 @@ needs a lot of work. This is just a base model of a Project
 - ProjectManagerV2 lets you securely add your account and manage only your projects. 📝
 - ProjectManagerV2 uses Laravel Breeze for user authentication. 🪪
 
-It’s a practice project.
-
 ---
 
-# ProjectManagerV2 is still in working progress.
+# 👷🏽ProjectManagerV2 is still in working progress.
 
 - CSS needs to be polished. 🧼
 - User needs to be able to manage his account. 👨🏽‍💼
@@ -27,8 +25,49 @@ It’s a practice project.
 
 ---
 
+# Installation & setup
+
+1. **Clone the repository**
+```
+git clone https://github.com/Brank01Dev/ProjectManagerV2.git
+cd ProjectManagerV2
+```
+2. **Install dependencies**
+```
+composer install
+npm install
+```
+   
+3. **Run the development servers**
+```
+php artisan serve
+npm run dev
+```
+   
+4. **Open your browser at:**
+```
+http://localhost:8000
+```
+---
+
+# 🚀 Current Features
+
+- User registration & login 🔐
+- CRUD for projects 🖨️
+- Simple task management 👨🏽‍💼
+- Responsive layout 📂
+
+---
+
 
 # Screenshot of dashboard page in first version.
 
 ![Screenshot 2025-10-14 at 17 11 01](https://github.com/user-attachments/assets/2f4b2dc7-e154-43ad-954e-e2b1363768e0)
 
+---
+
+# 👤 Author
+
+- Branko – [GitHub￼](https://github.com/Brank01Dev)
+
+Junior Full-Stack Developer passionate about building practical web applications.
