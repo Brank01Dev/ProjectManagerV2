@@ -1,6 +1,6 @@
 @extends('layout')
-  
 @section('content')
+@vite(['resources/scss/createproject.scss'])
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
@@ -17,7 +17,7 @@
   
     @if ($errors->any())
         <div class="alert alert-danger">
-            <strong>Problems!!!</strong>
+            <strong>Error!!!</strong>
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
