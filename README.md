@@ -1,12 +1,12 @@
 # ProjectManagerV2
 
-My second Laravel project — built for learning purposes.  
-This is upgraded version of first Project Manager. Project is still in very rough shape and
-needs a lot of work. This is just a base model of a Project
+
+ProjectManagerV2 is a simple project management web app built with **Laravel 10** and **TailwindCSS**.  
+It allows users to create, edit, and delete projects, and manage basic task lists within each project.
 
 ---
 
-## 🔍 What it new???
+## 🔍 What it new?
 
 **ProjectManagerV2** updates:
 
@@ -14,21 +14,68 @@ needs a lot of work. This is just a base model of a Project
 - ProjectManagerV2 lets you securely add your account and manage only your projects. 📝
 - ProjectManagerV2 uses Laravel Breeze for user authentication. 🪪
 
-It’s a practice project.
+---
+
+# Installation & setup
+
+1. **Clone the repository**
+```
+git clone https://github.com/Brank01Dev/ProjectManagerV2.git
+cd ProjectManagerV2
+```
+2. **Install dependencies**
+```
+composer install
+npm install
+```
+   
+3. **Run the development servers**
+```
+php artisan serve
+npm run dev
+```
+   
+4. **Open your browser at:**
+```
+http://localhost:8000
+```
+---
+
+# 🚀 Current Features
+
+- User registration & login 🔐
+- CRUD for projects 🖨️
+- Simple task management 👨🏽‍💼
+- Responsive layout 📂
 
 ---
 
-# ProjectManagerV2 is still in working progress.
+# 🧰 Tech Stack
 
-- CSS needs to be polished. 🧼
-- User needs to be able to manage his account. 👨🏽‍💼
-- Security needs to be upgraded. 🔐
-- User needs to be able to get a email notification that has his project description. 📩
+- **Backend:** Laravel 10 (PHP)
+- **Frontend:** Blade + TailwindCSS
+- **Authentication:** Laravel Breeze
+- **Database:** MySQL
+- **Runtime:** PHP 8+, Node.js, npm
 
 ---
 
 
-# Screenshot of dashboard page in first version.
+#  🖼️ Preview
 
-![Screenshot 2025-10-14 at 17 11 01](https://github.com/user-attachments/assets/2f4b2dc7-e154-43ad-954e-e2b1363768e0)
+![Dashboard Screenshot](https://github.com/user-attachments/assets/2f4b2dc7-e154-43ad-954e-e2b1363768e0)
+(Example of the project dashboard UI)
+ 
+---
+
+# 👤 Author
+- Branko – Junior Full-Stack Developer passionate about building practical web applications.
+-📍Based in Switzerland 🇨🇭  
+- [GitHub￼](https://github.com/Brank01Dev)
+  
+---
+
+## 📌 Project Status
+🚧 **Work in progress.**  
+This version focuses on authentication and project CRUD — additional features and UI improvements are planned for upcoming releases.
 
