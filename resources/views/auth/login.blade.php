@@ -10,12 +10,11 @@
     <h1 class="segment">Welcome to Project Manager</h1>
     <h3 style="color: rgba(6, 6, 6, 0.356)"> Please login </h3>
 
-    <!-- Session Status -->
+
     <x-auth-session-status class="mt-4" :status="session('status')" />
     
     <form method="POST" action="{{ route('login') }}">
         @csrf
-        <!-- Email Address -->
         <div style="margin-bottom: 2em;">
             <x-text-input id="email"
             type="email"
@@ -25,7 +24,7 @@
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
-        <!-- Password -->
+
         <div style="margin-botttom: 2em">
             <x-text-input id="password"
                             type="password"
@@ -37,8 +36,6 @@
         </div>
 
 
-
-        <!-- Login + Register buttons -->
             <div class="buttons">
                 <x-primary-button>{{ __('Log in') }}</x-primary-button>
             </div>
