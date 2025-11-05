@@ -1,3 +1,10 @@
+<html>
+<head>
+    <title>My Laravel App</title>
+    @vite(['resources/scss/loginpage.scss'])
+</head>
+
+
 <section>
     <header>
         <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
