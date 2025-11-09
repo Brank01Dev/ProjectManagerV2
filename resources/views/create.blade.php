@@ -1,19 +1,16 @@
 @extends('layout')
 @section('content')
 @vite(['resources/scss/createproject.scss'])
-    <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Add an project!</h2>
-            </div>
-            <div class="pull-right">
-                <a class="btn btn-primary"
-                    href="{{ route('Project.index') }}">
-                    Back
-                </a>
-            </div>
+<div class="row align-items-center">
+    <div class="justify-content-between align-items-center margin-tb">
+        <div class="pull-left">
+            <h2>Add a project!</h2>
         </div>
-    </div> 
+        <div class="button-back">
+            <a href="{{ route('Project.index') }}" class="btn-back">Back</a>
+        </div>
+    </div>
+</div>
   
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -30,7 +27,7 @@
         {{ csrf_field() }}
   
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div>
 
                 <div class="form-group">
                     <strong>Name:</strong>
@@ -39,7 +36,7 @@
 
                 <div class="form-group">
                     <strong>Descpription:</strong>
-                    <input type="text" name="description" class="form-control" placeholder="Project Descpription">
+                    <input type="text" name="description" class="form-control" placeholder = "Project Descpription">
                 </div>
 
                 <div class="form-group">

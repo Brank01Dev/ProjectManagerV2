@@ -1,19 +1,18 @@
 @extends('layout')
- 
 @section('content')
-    <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Edit Prroject</h2>
-            </div>
-            <div class="pull-right">
-                <a class="btn btn-primary"
-                    href="{{ route('Project.index') }}">
-                    Back
-                </a>
-            </div>
+@vite(['resources/scss/createproject.scss'])
+
+
+<div class="row align-items-center">
+    <div class="justify-content-between align-items-center margin-tb">
+        <div class="pull-left">
+            <h2>Edit your project!</h2>
+        </div>
+        <div class="button-back">
+            <a href="{{ route('Project.index') }}" class="btn-back">Back</a>
         </div>
     </div>
+</div>
   
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -31,7 +30,7 @@
     {{ method_field('PATCH') }}
   
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div>
 
             <div class="form-group">
                 <strong>Project name:</strong>
