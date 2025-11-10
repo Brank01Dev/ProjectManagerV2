@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>My Laravel App</title>
+    <title>Project Manager</title>
     @vite(['resources/scss/editpage.scss'])
 </head>
 
@@ -15,6 +15,11 @@
             {{ __("Update your account's profile information and email address.") }}
         </p>
     </header>
+
+    <div class="button-back">
+        <a href="{{ route('Project.index') }}" class="btn-back">Back</a>
+    </div>
+    
 <div style="margin-right:100%">
     <form id="send-verification" method="post" action="{{ route('verification.send') }}">
         @csrf

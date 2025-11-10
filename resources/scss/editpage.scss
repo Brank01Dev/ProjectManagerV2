@@ -126,3 +126,22 @@ button {
         box-shadow:  10px 10px 10px $color-shadow;
       }
 }
+
+.button-back {
+  .btn-back {
+    position: absolute;
+    top: 4em;
+    right: 6em;
+    padding: 1em 4em;
+    background-color: #3a4565bb;
+    color: #ffffff8e;
+    border-radius: 23px;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      background-color: #3a4565;
+      box-shadow:  10px 10px 10px $color-shadow;
+    }
+  }
+}
+
