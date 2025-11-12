@@ -10,6 +10,9 @@ class Project extends Model
     use HasFactory;
 
     protected $table = 'project'; 
+    protected $casts = [
+        'date_of_end' => 'datetime',
+    ];
  
     protected $fillable = [
         'name',
