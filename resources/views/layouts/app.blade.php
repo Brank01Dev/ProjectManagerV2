@@ -19,11 +19,13 @@
 
             <!-- Page Heading -->
             @isset($header)
-                <header class="bg-white dark:bg-gray-800 shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <header class="bg-[#EBECF0] shadow-sm">
+                <div class="max-w-7xl mx-auto py-10 px-6">
+                    <div class="text-3xl font-semibold text-gray-900 tracking-tight">
                         {{ $header }}
                     </div>
-                </header>
+                </div>
+            </header>
             @endisset
 
             <!-- Page Content -->
