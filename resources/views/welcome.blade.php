@@ -16,7 +16,7 @@
             <img 
                 src="{{ asset('images/ProjectManagerFinalLogo.svg') }}" 
                 alt="ProjectManagerV2 Logo" 
-                class="h-20 w-20 md:h-28 md:w-28"
+                class="h-20 w-20 md:h-28 md:w-28 transition-transform duration-300 ease-out hover:scale-110"
             >
             <h1 class="text-3xl md:text-6xl font-bold text-gray-900">
                 PROJECT MANAGER
