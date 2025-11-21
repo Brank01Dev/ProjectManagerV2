@@ -22,6 +22,7 @@ It allows users to create, edit, and delete projects, and manage basic task list
 ```
 git clone https://github.com/Brank01Dev/ProjectManagerV2.git
 cd ProjectManagerV2
+cd userauth
 ```
 2. **Install dependencies**
 ```
