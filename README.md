@@ -6,7 +6,7 @@ It allows users to create, edit, and delete projects, and manage basic task list
 
 ---
 
-## 🔍 What it new?
+## 🔍 What is new?
 
 **ProjectManagerV2** updates:
 
