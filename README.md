@@ -64,13 +64,13 @@ http://localhost:8000
 
 #  🖼️ Preview
 
-![Dashboard](public/screenshots/dashboard.png)
+![Dashboard](public/screenshots/dashboard.jpg)
 (Dashboard View)
 
-![Add Project](public/screenshots/add_project.png)
+![Add Project](public/screenshots/add_project.jpg)
 (Add Project View)
 
-![Profile](public/screenshots/profile.png)
+![Profile](public/screenshots/profile.jpg)
 (Profile View)
  
 ---
