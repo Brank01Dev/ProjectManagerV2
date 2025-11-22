@@ -1,90 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Project Manager Profile</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+<section>
+    <form id="send-verification" method="post" action="{{ route('verification.send') }}">
+        @csrf
+    </form>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
+    <form method="post" action="{{ route('profile.update') }}" class="space-y-6">
+        @csrf
+        @method('patch')
 
-<body class="bg-gray-50 min-h-screen font-sans text-gray-800 flex flex-col items-center px-6 py-10">
+        <div>
+            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+            <input id="name" name="name" type="text" value="{{ old('name', $user->name) }}" required autofocus
+                autocomplete="name"
+                class="w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 transition-colors">
+            <x-input-error :messages="$errors->get('name')" class="mt-2 text-sm text-red-600" />
+        </div>
 
+        <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+            <input id="email" name="email" type="email" value="{{ old('email', $user->email) }}" required
+                autocomplete="username"
+                class="w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 transition-colors">
 
-    <p class="text-gray-500 text-base md:text-lg leading-relaxed max-w-2xl text-center mb-10">
-        Update your account information and keep your profile details up to date.
-    </p>
+            <x-input-error :messages="$errors->get('email')" class="mt-2 text-sm text-red-600" />
 
-
-    <div class="w-full max-w-lg bg-white shadow-md rounded-xl p-6 md:p-8 space-y-8">
-
-        <form id="send-verification" method="post" action="{{ route('verification.send') }}">
-            @csrf
-        </form>
-
-        <form method="post" action="{{ route('profile.update') }}" class="space-y-6">
-            @csrf
-            @method('patch')
-
-            <div class="flex flex-col space-y-2">
-                <label for="name" class="text-gray-700 font-medium">Name</label>
-                <input id="name" name="name" type="text"
-                       value="{{ old('name', $user->name) }}"
-                       required autofocus autocomplete="name"
-                       class="w-full p-3 rounded-md border border-gray-300 bg-gray-50 
-                              focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200">
-                <x-input-error :messages="$errors->get('name')" class="text-red-500 text-sm" />
-            </div>
-
-            <div class="flex flex-col space-y-2">
-                <label for="email" class="text-gray-700 font-medium">Email</label>
-                <input id="email" name="email" type="email"
-                       value="{{ old('email', $user->email) }}"
-                       required autocomplete="username"
-                       class="w-full p-3 rounded-md border border-gray-300 bg-gray-50 
-                              focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200">
-
-                <x-input-error :messages="$errors->get('email')" class="text-red-500 text-sm" />
-
-                @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
-                    <div class="text-sm text-gray-600 space-y-2 bg-yellow-50 p-4 rounded-lg border border-yellow-200">
-
-                        <p>Your email address is unverified.</p>
-
-                        <button form="send-verification" 
-                                class="text-blue-600 hover:underline font-medium">
+            @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && !$user->hasVerifiedEmail())
+                <div class="mt-4 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+                    <p class="text-sm text-yellow-800">
+                        Your email address is unverified.
+                        <button form="send-verification"
+                            class="underline text-yellow-900 hover:text-yellow-700 font-medium ml-1">
                             Click here to re-send verification email.
                         </button>
-
-                        @if (session('status') === 'verification-link-sent')
-                            <p class="text-green-600">
-                                A new verification link has been sent to your email.
-                            </p>
-                        @endif
-                    </div>
-                @endif
-            </div>
-
-            <div class="flex items-center justify-between mt-6">
-                
-                <button type="submit"
-                        class="px-6 py-3 bg-blue-600 text-white rounded-md font-semibold 
-                               shadow-md hover:bg-blue-700 transition hover:scale-[1.03]">
-                    Save
-                </button>
-
-                @if (session('status') === 'profile-updated')
-                    <p x-data="{ show: true }" 
-                       x-show="show" x-transition 
-                       x-init="setTimeout(() => show = false, 2000)"
-                       class="text-green-600 text-sm ml-4">
-                        Saved.
                     </p>
-                @endif
-            </div>
 
-        </form>
+                    @if (session('status') === 'verification-link-sent')
+                        <p class="mt-2 text-sm text-green-600 font-medium">
+                            A new verification link has been sent to your email.
+                        </p>
+                    @endif
+                </div>
+            @endif
+        </div>
 
-    </div>
+        <div class="flex items-center gap-4">
+            <button type="submit"
+                class="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors shadow-sm">
+                Save Changes
+            </button>
 
-</body>
-</html>
+            @if (session('status') === 'profile-updated')
+                <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)"
+                    class="text-sm text-green-600 flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Saved
+                </p>
+            @endif
+        </div>
+    </form>
+</section>
