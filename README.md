@@ -64,8 +64,14 @@ http://localhost:8000
 
 #  🖼️ Preview
 
-![Dashboard Screenshot](https://github.com/user-attachments/assets/2f4b2dc7-e154-43ad-954e-e2b1363768e0)
-(Example of the project dashboard UI)
+![Dashboard](public/screenshots/dashboard.png)
+(Dashboard View)
+
+![Add Project](public/screenshots/add_project.png)
+(Add Project View)
+
+![Profile](public/screenshots/profile.png)
+(Profile View)
  
 ---
 
