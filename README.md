@@ -84,5 +84,5 @@ http://localhost:8000
 
 ## 📌 Project Status
 🚧 **Work in progress.**  
-This version focuses on authentication and project CRUD — additional features and UI improvements are planned for upcoming releases.
+This version focuses on authentication and project CRUD — additional features and improvements are planned for upcoming releases.
 
