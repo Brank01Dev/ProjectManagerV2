@@ -6,7 +6,7 @@ It allows users to create, edit, and delete projects, and manage basic task list
 
 ---
 
-## 🔍 What is new?
+## What is new?
 
 **ProjectManagerV2** updates:
 
@@ -42,16 +42,16 @@ http://localhost:8000
 ```
 ---
 
-# 🚀 Current Features
+# Current Features
 
-- User registration & login 🔐
-- CRUD for projects 🖨️
-- Simple task management 👨🏽‍💼
-- Responsive layout 📂
+- User registration & login 
+- CRUD for projects 
+- Simple task management 
+- Responsive layout 
 
 ---
 
-# 🧰 Tech Stack
+# Tech Stack
 
 - **Backend:** Laravel 10 (PHP)
 - **Frontend:** Blade + TailwindCSS
@@ -62,7 +62,7 @@ http://localhost:8000
 ---
 
 
-#  🖼️ Preview
+#  Preview
 
 ![Dashboard](public/screenshots/dashboard.jpg)
 (Dashboard View)
@@ -75,14 +75,14 @@ http://localhost:8000
  
 ---
 
-# 👤 Author
+# Author
 - Branko – Junior Full-Stack Developer passionate about building practical web applications.
--📍Based in Switzerland 🇨🇭  
+- Based in Switzerland
 - [GitHub￼](https://github.com/Brank01Dev)
   
 ---
 
-## 📌 Project Status
-🚧 **Work in progress.**  
+## Project Status
+ **Work in progress.**  
 This version focuses on authentication and project CRUD — additional features and improvements are planned for upcoming releases.
 
